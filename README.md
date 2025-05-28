@@ -63,11 +63,10 @@ GroceryMate is a modern, full-featured e-commerce platform designed for seamless
 
 ## 📸 Screenshots & Demo
 
-![imagen](https://github.com/user-attachments/assets/ea039195-67a2-4bf2-9613-2ee1e666231a)
-![imagen](https://github.com/user-attachments/assets/a87e5c50-5a9e-45b8-ad16-2dbff41acd00)
-![imagen](https://github.com/user-attachments/assets/589aae62-67ef-4496-bd3b-772cd32ca386)
-![imagen](https://github.com/user-attachments/assets/2772b85e-81f7-446a-9296-4fdc2b652cb7)
-
+![Running application in the browser](https://github.com/user-attachments/assets/403ae41e-28e9-4575-a46e-b9c8608fbbb2)
+<img width="1356" alt="Running Application on EC2 ip" src="https://github.com/user-attachments/assets/2170a382-e2ce-46a6-8146-e06ad887bbdb" />
+<img width="1266" alt="Running application on ALB DNS name" src="https://github.com/user-attachments/assets/bca45f4f-4520-4bd0-9914-4ccb4d0d7423" />
+<img width="1454" alt=" running application on Public IP:DNS" src="https://github.com/user-attachments/assets/94934aef-bc4d-46a5-a73a-dd04a5364fdc" />
 <img width="1340" alt="s3 content" src="https://github.com/user-attachments/assets/32448cea-0954-413b-aaab-2cf2033bdaea" />
 
 https://github.com/user-attachments/assets/d1c5c8e4-5b16-486a-b709-4cf6e6cce6bc
