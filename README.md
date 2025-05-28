@@ -64,9 +64,13 @@ GroceryMate is a modern, full-featured e-commerce platform designed for seamless
 ## 📸 Screenshots & Demo
 
 ![Running application in the browser](https://github.com/user-attachments/assets/403ae41e-28e9-4575-a46e-b9c8608fbbb2)
+
 <img width="1356" alt="Running Application on EC2 ip" src="https://github.com/user-attachments/assets/2170a382-e2ce-46a6-8146-e06ad887bbdb" />
+
 <img width="1266" alt="Running application on ALB DNS name" src="https://github.com/user-attachments/assets/bca45f4f-4520-4bd0-9914-4ccb4d0d7423" />
+
 <img width="1454" alt=" running application on Public IP:DNS" src="https://github.com/user-attachments/assets/94934aef-bc4d-46a5-a73a-dd04a5364fdc" />
+
 <img width="1340" alt="s3 content" src="https://github.com/user-attachments/assets/32448cea-0954-413b-aaab-2cf2033bdaea" />
 
 https://github.com/user-attachments/assets/d1c5c8e4-5b16-486a-b709-4cf6e6cce6bc
@@ -158,7 +162,7 @@ POSTGRES_URI=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}
 python3 run.py
 ```
 
-###  AWS Setup
+### ☁️ AWS Setup
 
 - ✅ Connected to AWS account using IAM and SSO  
 - ✅ Launched an EC2 instance in default VPC  
@@ -199,17 +203,31 @@ python3 run.py
 ---
 ## ☁️ AWS Deployment Steps
 
-### EC2
+### 🌐 Virtual Private Cloud (VPC)
+
+Subnets: 3 Public (for ALB, EC2) & 3 Private (for RDS).
+Internet Gateway: Provides internet access to public subnets.
+Route Table: Configured for public subnets routing.
+VPC Endpoint Gateway: Provides access to S3 bucket over AWS network.
+
+### 🔐 Security Groups
+
+ALB security group allows ports 80 and 443.
+EC2 security group allows SSH from a specific IP and ALB traffic over port 5000.
+RDS security group allows access only from EC2 instances.
+
+
+### 💻 EC2 (Elastic Compute Cloud)
 
 - Deployed Docker container on Amazon Linux EC2  
 - Security group allows HTTP/HTTPS traffic only from ELB
 
-### ELB
+### ⚖️ ELB (Elastic Load Balancer)
 
 - Attached EC2 instances to ELB  
 - Health checks configured for `/health` endpoint  
 
-### RDS
+### 🗄️ RDS (Relational Database Service)
 
 - PostgreSQL RDS instance in private subnet  
 - Security group allows inbound from EC2 instance only
@@ -223,7 +241,7 @@ docker build -t grocerymate .
 docker run -p 5000:5000 --env-file .env grocerymate
 ```
 
-### S3
+### 🪣 S3 (Simple Storage Service)
 
 - Created S3 bucket via Terraform  
 - Used AWS CLI to upload images  
