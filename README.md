@@ -16,6 +16,7 @@
 
 - [Overview](#-overview)
 - [Features](#-features)
+- [Architecture Diagram](#-Architecture-Diagram)
 - [Screenshots & Demo](#-screenshots--demo)
 - [Prerequisites](#-prerequisites)
 - [Installation](#-installation)
@@ -46,8 +47,7 @@
 ## 🚀 Overview
 
 GroceryMate is an application developed as part of the Masterschools program by **Alejandro Roman Ibanez**. It is a modern, full-featured e-commerce platform designed for seamless online grocery shopping. It provides an intuitive user interface and a secure backend, allowing users to browse products, manage their shopping basket, and complete purchases efficiently.
-
-GroceryMate is a modern, full-featured e-commerce platform designed for seamless online grocery shopping. It provides an intuitive user interface and a secure backend, allowing users to browse products, manage their shopping basket, and complete purchases efficiently.
+Our task was to design and deploy its AWS infrastructure step by step, implementing each component individually.
 
 ## 🛒 Features
 
@@ -60,6 +60,10 @@ GroceryMate is a modern, full-featured e-commerce platform designed for seamless
   - Secure billing and shipping information handling.
   - Multiple payment options.
   - Automatic total price calculation.
+    
+## 🏛️ Architecture Diagram
+
+![AWS-Final-architecture](https://github.com/user-attachments/assets/35342513-64ed-4f5a-bf47-bafb32b2f800)
 
 ## 📸 Screenshots & Demo
 
@@ -168,33 +172,33 @@ python3 run.py
 - ✅ Launched an EC2 instance in default VPC  
 - ✅ Connected to EC2 using SSH and verified with a "Hello World" command  
 
-###  Fork & Deploy
+### 🍴 Fork & Deploy
 
 - ✅ Forked the GroceryMate repository  
 - ✅ Deployed app on EC2 instance  
 - ✅ Exposed the app to the internet using security groups  
 - ✅ Set up an Elastic Load Balancer (ELB)  
 
-###  Docker
+### 🐳 Docker
 
 - ✅ Created and pushed a custom `Dockerfile`  
 - ✅ Built and ran Docker locally using `host.docker.internal` for PostgreSQL  
 - ✅ Built and deployed Docker container on EC2  
 
-###  Database on RDS
+### 🗄️ Database on RDS
 
 - ✅ Created an RDS PostgreSQL instance  
 - ✅ Migrated the app's local DB to RDS  
 - ✅ Allowed EC2 to connect to private RDS using security groups  
 - ✅ Enabled RDS encryption and restricted access  
 
-###  Infrastructure as Code
+### 🏗️ Infrastructure as Code
 
 - ✅ Created `infrastructure/` folder in the forked repo  
 - ✅ Wrote Terraform files for provisioning EC2, Security Groups, and RDS  
 - ✅ Used AWS CLI and SSO to manage infrastructure  
 
-###  S3 Integration
+### 🪣 S3 Integration
 
 - ✅ Deployed S3 bucket using Terraform  
 - ✅ Uploaded avatar images to S3 via AWS CLI  
